@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collins — DJ Collombo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Canvas for teddy drops -->
+  <canvas id="teddyCanvas" aria-hidden="true"></canvas>
+
+  <!-- soft liquid glow layers -->
+  <div class="liquid-bg" aria-hidden="true">
+    <div class="liquid l1"></div>
+    <div class="liquid l2"></div>
+    <div class="liquid l3"></div>
+  </div>
+
+  <!-- cursor glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Slide-in iPod-like playlist -->
+  <aside id="musicPanel" class="music-panel" aria-label="Music player">
+    <div class="mp-top">
+      <div class="mp-title">🎧 DJ Collombo</div>
+      <button id="mpToggle" class="mp-toggle" aria-label="Open music panel">▸</button>
+    </div>
+
+    <div class="mp-body">
+      <div class="mp-display">
+        <div class="mini-disk"></div>
+        <div class="track-meta">
+          <div id="trackTitle" class="title">Mix 1 — Club Intro</div>
+          <div id="trackArtist" class="artist">DJ Collombo</div>
+        </div>
+      </div>
+
+      <div class="mp-controls">
+        <button id="prevBtn" class="ctl" aria-label="Previous">⏮</button>
+        <button id="playBtn" class="ctl" aria-label="Play">🩸</button>
+        <button id="pauseBtn" class="ctl hidden" aria-label="Pause">🖕</button>
+        <button id="nextBtn" class="ctl" aria-label="Next">⏭</button>
+      </div>
+
+      <ul id="playlist" class="playlist" aria-label="Playlist"></ul>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav apple-frame">
+      <div class="brand">
+        <div class="logo-disk" aria-hidden="true">
+          <div class="disk-icon">💿</div>
+          <div class="brand-text">
+            <div class="title-shimmer">Collins</div>
+            <div class="dj-name-small">DJ_Collombo</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">🌐Home</a></li>
+        <li><a href="#about">❤️About</a></li>
+        <li><a href="#skills">🛠️Skills</a></li>
+        <li><a href="#projects">🎃Projects</a></li>
+        <li><a href="#gallery">🎬Gallery</a></li>
+        <li><a href="#contact">🚨Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="mainContent">
+    <!-- HERO -->
+    <section id="home" class="hero apple-frame">
+      <div class="hero-left">
+        <h1 class="hero-title"><span class="gold">HEY FRIEND🌹 </span> — <span class="subtle">I'm Collins Luke</span></h1>
+        <p class="lead">IT Expert · Developer · Designer · DJ <br> Here Rhythm meets craft. I build web experiences & soundscapes.</p>
+        <div class="cta-wrap">
+          <a class="btn" href="#projects">🎧 Listen Now</a>
+          <a class="btn secondary hire-btn" href="#contact">🎯 Hire Me</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="cd-wrap">
+          <div class="rotating-cd" aria-hidden="true"></div>
+          <div class="dj-fade">DJ_Collombo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="apple-frame">
+      <h2>About</h2>
+      <p class="short">
+       I am an innovative IT specialist, web developer, and creative designer with a passion for technology and problem-solving. My journey in IT has been fueled by curiosity and a drive to create solutions that make life easier, smarter, and more engaging. I specialize in building modern, responsive websites, delivering IT support and troubleshooting, and designing visual content that connects with people.<br>
+        Over the years, I’ve worked on diverse projects — from developing tech platforms like Tech Hub and Parcel-App, to designing event posters and branding materials for DJ Collombo. This mix of technical and creative work has sharpened my ability to merge design thinking with technical execution, ensuring that every project I touch is both functional and visually striking.<br> 
+        I am proficient in Microsoft Office Suite (Word, Excel, PowerPoint, Access), which supports my ability to deliver professional documentation, data analysis, and impactful presentations. Alongside this, I bring expertise in web technologies (HTML, CSS, JavaScript, React, Node.js), graphic design tools, and IT troubleshooting. My approach is not just about solving problems, but also about crafting experiences that are reliable, efficient, and inspiring.<br>
+        What sets me apart is my adaptability and creativity — I thrive whether I’m coding a web application, designing an eye-catching poster, analyzing data in Excel, or guiding someone through IT support. I enjoy collaborating, but I’m equally confident working independently to see projects through from concept to completion. Driven by a vision to become a well-rounded IT expert, I’m always learning, experimenting, and exploring new ways to blend technology with creativity. My ultimate goal is to provide solutions that add value, whether for individuals, businesses, or entire communities.<br>
+      </p>
+      <ul class="simple-list">
+        <li>Web • Design • IT Support</li>
+        <li>Branding • Mixes • Visuals</li>
+       <a href="docs/Collins_IT_Expert_CV word.docx" target="_blank">View My CV</a>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="apple-frame">
+      <h2>Skills</h2>
+      <div class="grid-2">
+        <div class="card">• Web Development: HTML, CSS, JavaScript, React <br> • ICT Support & Systems Analysis, Computerized Accounting<br>• Creative Side: DJ Branding, Event Design, Music Enthusiast (DJ Collombo)
+        </div>
+        <div class="card">• Microsoft Office Suite: Word, Excel (formulas, data analysis, PivotTables), PowerPoint, Access<br> 
+• Graphics & Design: Photoshop, After Effects, Canva, Logo Creation, Posters, UI/UX, Animated Intros<br>
+
+
+</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS + PROMO -->
+    <section id="projects" class="apple-frame">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card"><h1> TECH HUB </h1>
+           👋Yoh Friend, need any-help in fixing computer Errors⁉️ <br>🛠️If you need quick fixes/troubleshooting processes to your computer or laptop,Check out this website <br>
+                                                                                                    I created just for your specific needs.<br>
+                                                                                                    🤖Have fun as you discover easier ways to manage and troubleshoot your laptops and Pc's</div>
+        <div class="project-card">
+          <h1>DJ Collombo
+            <header class="logo-container">
+<img src="images/dj purple Collombo logo.png" alt="Dj_Collombo Logo" class="logo">
+      </header>
+          </h1> — branding & mixes</div>
+        <div class="project-card"><h1>Parcel-App </h1>— tracking concept</div>
+      </div>
+
+      <div class="promo-sub">
+        <h3>Promo Videos</h3>
+        <p class="muted">Some of the best mixtracks ever heard <code>/Check out my Youtube Channel/</code> Show some love❤️.</p>
+        <div class="promo-grid">
+          <div class="promo-item">
+            <video class="promo-video" controls>
+              <source src="videos/VID-20251016-WA0000.mp4" type="video/mp4">
+              <!-- placeholder if not present -->
+            </video>
+            <div class="promo-caption">ArE@ 254 MIX -PREMIUM BANGERS</div>
+          </div>
+
+          <div class="promo-item">
+            <video class="promo-video" controls>
+              <source src="videos/Video (1).mp4" type="video/mp4">
+            </video>
+            <div class="promo-caption">Club Bangers — Remix & Mastered </div>
+          </div>
+
+          <div class="promo-item">
+            <video class="promo-video" controls>
+              <source src="videos/video (2).mp4" type="video/mp4">
+            </video>
+            <div class="promo-caption">Dj Intros & Logos available </div>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.youtube.com/@djcollombo3560" target="_blank" class="yt-btn">
+  <i class="fab fa-youtube"></i> Watch on YouTube
+</a>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="apple-frame">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item gun-frame"><img src="images/cool fox.png" alt="Poster"></div>
+        <div class="gallery-item gun-frame"><img src="images/zj (1).png" alt="Poster"></div>
+        <div class="gallery-item gun-frame"><img src="images/backblue (7).jpeg" alt="Poster"></div>
+      </div>
+      <button class="btn secondary">View More</button>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="apple-frame">
+      <h2>Contact</h2>
+      
+       <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button class="btn" type="submit">Send Me A Message<BR>😊</button>
+          <a href="https://github.com/Zj-Loc" target="_blank" class="social-icon github">
+  <i class="fab fa-github"></i><p>Zj-Loc</p>
+  
+</a>
+
+      </form>
+      <p class="contact-meta muted">📧 collinslukk@gmail.com     • 🎶 DJ Collombo  • ☎️0797770872   </p>
+    </section>
+
+  </main>
+
+  <footer class="apple-frame">
+    <p class="muted">© 2025 Collins — Zj-Loc. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ 
