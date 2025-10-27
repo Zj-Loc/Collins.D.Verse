@@ -1,0 +1,41 @@
+name: 🚀 Deploy Collins.D.Verse Website
+
+# Trigger the workflow whenever you push to the main branch
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual runs from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Set up the deployment job
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Step 1: Pull your repo content
+      - name: 📂 Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Upload your static site (everything in root folder)
+      - name: 🏗️ Upload website files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .  # Keep this as "." unless your site is in a subfolder
+
+      # Step 3: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Optional: Confirm deployment
+      - name: ✅ Deployment successful
+        run: echo "Collins.D.Verse is now live!"
