@@ -188,13 +188,25 @@
 
     <!-- CONTACT -->
     <section id="contact" class="apple-frame">
-      <h2>Contact</h2>
-      
-       <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST" class="contact-form">
+  <h2>Contact</h2>
+
+  <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST" class="contact-form">
+    
+    <!-- Optional hidden inputs for better control -->
+    <input type="hidden" name="_subject" value="New Message from Collins.D.Verse Contact Form">
+    <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_next" value="https://zj-loc.github.io/Collins.D.Verse/thankyou.html"> <!-- Redirect after submit -->
+
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-        <button class="btn" type="submit">Send Me A Message<BR>😊</button>
+    
+    <button class="btn" type="submit">
+      Send Me A Message <br> 😊
+    </button>
+  </form>
+</section>
+
           <a href="https://github.com/Zj-Loc" target="_blank" class="social-icon github">
   <i class="fab fa-github"></i><p>Zj-Loc</p>
   
@@ -215,3 +227,4 @@
 </html>
 
  
+
