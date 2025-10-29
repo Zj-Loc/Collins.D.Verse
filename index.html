@@ -190,12 +190,15 @@
     <section id="contact" class="apple-frame">
   <h2>Contact</h2>
 
-  <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST" class="contact-form">
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+    
+    <!-- Required Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="46c17446-40ba-457a-a081-8f60d5fd505b">
     
     <!-- Optional hidden inputs for better control -->
     <input type="hidden" name="_subject" value="New Message from Collins.D.Verse Contact Form">
     <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA -->
-    <input type="hidden" name="_next" value="https://zj-loc.github.io/Collins.D.Verse/thankyou.html"> <!-- Redirect after submit -->
+    <input type="hidden" name="redirect" value="https://zj-loc.github.io/Collins.D.Verse/thankyou.html"> <!-- Redirect after submit -->
 
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -206,6 +209,7 @@
     </button>
   </form>
 </section>
+
 
           <a href="https://github.com/Zj-Loc" target="_blank" class="social-icon github">
   <i class="fab fa-github"></i><p>Zj-Loc</p>
@@ -227,4 +231,5 @@
 </html>
 
  
+
 
