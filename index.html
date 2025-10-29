@@ -238,10 +238,25 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+  const moreImages = document.querySelector('.more-images');
+
+  viewMoreBtn.addEventListener('click', () => {
+    if (moreImages.style.display === 'none' || moreImages.style.display === '') {
+      moreImages.style.display = 'grid'; // keeps layout consistent
+      viewMoreBtn.textContent = 'Show Less';
+    } else {
+      moreImages.style.display = 'none';
+      viewMoreBtn.textContent = 'View More';
+    }
+  });
+</script>
 </body>
 </html>
 
  
+
 
 
 
