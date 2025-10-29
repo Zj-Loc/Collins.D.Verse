@@ -177,14 +177,25 @@
 
     <!-- GALLERY -->
     <section id="gallery" class="apple-frame">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item gun-frame"><img src="images/cool fox.png" alt="Poster"></div>
-        <div class="gallery-item gun-frame"><img src="images/zj (1).png" alt="Poster"></div>
-        <div class="gallery-item gun-frame"><img src="images/backblue (7).jpeg" alt="Poster"></div>
-      </div>
-      <button class="btn secondary">View More</button>
-    </section>
+  <h2>Gallery</h2>
+
+  <div class="gallery-grid">
+    <!-- Always visible images -->
+    <div class="gallery-item gun-frame"><img src="images/cool fox.png" alt="Poster"></div>
+    <div class="gallery-item gun-frame"><img src="images/zj (1).png" alt="Poster"></div>
+    <div class="gallery-item gun-frame"><img src="images/backblue (7).jpeg" alt="Poster"></div>
+
+    <!-- Hidden images (only show when "View More" is clicked) -->
+    <div class="more-images" style="display: none;">
+      <div class="gallery-item gun-frame"><img src="images/djcollombo1.jpg" alt="Poster"></div>
+      <div class="gallery-item gun-frame"><img src="images/djcollombo2.jpg" alt="Poster"></div>
+      <div class="gallery-item gun-frame"><img src="images/djcollombo3.jpg" alt="Poster"></div>
+      <div class="gallery-item gun-frame"><img src="images/djcollombo4.jpg" alt="Poster"></div>
+    </div>
+  </div>
+
+  <button id="viewMoreBtn" class="btn secondary">View More</button>
+</section>
 
     <!-- CONTACT -->
     <section id="contact" class="apple-frame">
@@ -231,5 +242,6 @@
 </html>
 
  
+
 
 
