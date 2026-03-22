@@ -9,6 +9,9 @@
 
 </head>
 <body>
+  <div id="loader">
+  <div class="loader-text">DJ COLLOMBO</div>
+</div>
 
   <!-- Canvas for teddy drops -->
   <canvas id="teddyCanvas" aria-hidden="true"></canvas>
@@ -82,10 +85,15 @@
         <h1 class="hero-title"><span class="gold">HEY FRIEND🌹 </span> — <span class="subtle">I'm Collins Luke</span></h1>
         <p class="lead">IT Expert · Developer · Designer · DJ <br> Here Rhythm meets craft. I build web experiences & soundscapes.</p>
         <div class="cta-wrap">
-          <a class="btn" href="#projects">🎧 Listen Now</a>
+          <a class="btn" href="https://hearthis.at/dj-collomboe">🎧 Listen Now</a>
           <a class="btn secondary hire-btn" href="#contact">🎯 Hire Me</a>
         </div>
       </div>
+    
+      <button id="djModeToggle" class="dj-switch">
+  <span class="switch-circle"></span>
+  <span class="switch-text">DJ MODE</span>
+</button>
 
       <div class="hero-right">
         <div class="cd-wrap">
@@ -93,6 +101,7 @@
           <div class="dj-fade">DJ_Collombo</div>
         </div>
       </div>
+      
     </section>
 
     <!-- ABOUT -->
@@ -172,56 +181,49 @@
       <a href="https://www.youtube.com/@djcollombo3560" target="_blank" class="yt-btn">
   <i class="fab fa-youtube"></i> Watch on YouTube
 </a>
+<button id="promoteBtn" class="promote-btn">
+  💲 Promote This Deejay
+</button>
 
     </section>
 
     <!-- GALLERY -->
-    <section id="gallery" class="apple-frame">
+   <section id="gallery" class="apple-frame">
   <h2>Gallery</h2>
 
   <div class="gallery-grid">
     <!-- Always visible images -->
     <div class="gallery-item gun-frame"><img src="images/moneylove.jpg" alt="Poster"></div>
-    <div class="gallery-item gun-frame"><img src="images/pagani gold.jpg" alt="Poster"></div>
+    <div class="gallery-item gun-frame"><img src="images/chinagirl.jpg" alt="Poster"></div>
     <div class="gallery-item gun-frame"><img src="images/backblue (7).jpeg" alt="Poster"></div>
 
-    <!-- Hidden images (only show when "View More" is clicked) -->
-    <div class="more-images" style="display: none;">
+    <!-- Hidden images -->
+    <div class="more-images">
       <div class="gallery-item gun-frame"><img src="images/zoro.jpg" alt="Poster"></div>
+      <div class="gallery-item gun-frame"><img src="images/dj purple Collombo logo.png" alt="Poster"></div>
       <div class="gallery-item gun-frame"><img src="images/spongebob.jpg" alt="Poster"></div>
-      <div class="gallery-item gun-frame"><img src="images/chain.jpg" alt="Poster"></div>
-      <div class="gallery-item gun-frame"><img src="images/zj (1).png" alt="Poster"></div>
+      <div class="gallery-item gun-frame"><img src="images/nicrose logo finale.png" alt="Poster"></div>
     </div>
   </div>
 
   <button id="viewMoreBtn" class="btn secondary">View More</button>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+  </div>
 </section>
 
     <!-- CONTACT -->
     <section id="contact" class="apple-frame">
-  <h2>Contact</h2>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-    
-    <!-- Required Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="46c17446-40ba-457a-a081-8f60d5fd505b">
-    
-    <!-- Optional hidden inputs for better control -->
-    <input type="hidden" name="_subject" value="New Message from Collins.D.Verse Contact Form">
-    <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA -->
-    <input type="hidden" name="redirect" value="https://zj-loc.github.io/Collins.D.Verse/thankyou.html"> <!-- Redirect after submit -->
-
+      <h2>Contact</h2>
+      
+       <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-    
-    <button class="btn" type="submit">
-      Send Me A Message <br> 😊
-    </button>
-  </form>
-</section>
-
-
+        <button class="btn" type="submit">Send Me A Message<BR>😊</button>
           <a href="https://github.com/Zj-Loc" target="_blank" class="social-icon github">
   <i class="fab fa-github"></i><p>Zj-Loc</p>
   
@@ -236,28 +238,71 @@
   <footer class="apple-frame">
     <p class="muted">© 2025 Collins — Zj-Loc. All rights reserved.</p>
   </footer>
+  <div id="paymentModal" class="payment-modal">
+  <div class="payment-box">
+    <span class="close-pay">&times;</span>
+    <h2>🔥 Promote DJ Collombo</h2>
+    <p>Select payment method</p>
+
+    <div class="pay-options">
+      <button class="pay-btn mpesa">📱 Send via M-Pesa</button>
+      <a href="https://www.paypal.me/YOURPAYPAL" target="_blank" class="pay-btn paypal">💳 PayPal</a>
+    </div>
+
+    <div id="mpesaDetails" class="mpesa-box">
+      <p>Send to:</p>
+      <h3>0797770872</h3>
+      <p>Name: Collins</p>
+    </div>
+  </div>
+</div>
 
   <script src="script.js"></script>
-  <script>
+<script>
+  // View More button toggle
   const viewMoreBtn = document.getElementById('viewMoreBtn');
-  const moreImages = document.querySelector('.more-images');
+const moreImages = document.querySelector('.more-images');
 
-  viewMoreBtn.addEventListener('click', () => {
-    if (moreImages.style.display === 'none' || moreImages.style.display === '') {
-      moreImages.style.display = 'grid'; // keeps layout consistent
-      viewMoreBtn.textContent = 'Show Less';
-    } else {
-      moreImages.style.display = 'none';
-      viewMoreBtn.textContent = 'View More';
+// hide by default
+moreImages.classList.add('hidden');
+
+viewMoreBtn.addEventListener('click', () => {
+  moreImages.classList.toggle('hidden');
+
+  if (moreImages.classList.contains('hidden')) {
+    viewMoreBtn.textContent = 'View More';
+  } else {
+    viewMoreBtn.textContent = 'Show Less';
+  }
+});
+
+  // Lightbox feature
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const close = document.querySelector('.close');
+
+  // When an image is clicked
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  // Close lightbox
+  close.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
     }
   });
 </script>
+
+<canvas id="djVisualizer"></canvas>
 </body>
 </html>
-
  
-
-
-
-
-
