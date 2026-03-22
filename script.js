@@ -141,7 +141,7 @@ render();
 const tracks = [
   { src: 'music/jid.mp3', title: 'Cannabeats 1 — Intro', artist: 'DJ Collombo' },
   { src: 'music/jid (1).mp3', title: 'Cannabeats 2 — Midnight Drive', artist: 'DJ Collombo' },
-  { src: 'music/jid (2).mp3', title: 'Cannabeats 3 — Lovers Groove', artist: 'DJ Collombo' }
+  { src: 'music/gospeul king - mix ft Dj Collombo.mp3', title: 'Cannabeats 3 — Lovers Groove', artist: 'DJ Collombo' }
 ];
 
 const audio = new Audio();
