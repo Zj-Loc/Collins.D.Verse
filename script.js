@@ -278,3 +278,119 @@ document.querySelectorAll('.hire-btn').forEach(btn=>{
 if (window.innerWidth < 700) {
   teddies = teddies.slice(0, Math.max(12, Math.floor(MAX_TEDDIES/4)));
 }
+const promoteBtn = document.getElementById('promoteBtn');
+const paymentModal = document.getElementById('paymentModal');
+const closePay = document.querySelector('.close-pay');
+const mpesaBtn = document.querySelector('.mpesa');
+const mpesaBox = document.getElementById('mpesaDetails');
+
+// open modal
+promoteBtn.onclick = () => {
+  paymentModal.style.display = 'block';
+};
+
+// close modal
+closePay.onclick = () => {
+  paymentModal.style.display = 'none';
+};
+
+// click outside closes
+window.onclick = (e) => {
+  if (e.target === paymentModal) {
+    paymentModal.style.display = 'none';
+  }
+};
+
+// show mpesa details
+mpesaBtn.onclick = () => {
+  mpesaBox.style.display = 'block';
+};
+
+const djToggle = document.getElementById('djModeToggle');
+
+let djMode = false;
+djToggle.addEventListener('click', () => {
+  djMode = !djMode;
+
+  document.body.classList.toggle('dj-mode');
+  djToggle.classList.toggle('dj-active');
+
+  if (djMode) {
+    userInitiated = true;
+
+    if (!audio.src) audio.src = tracks[current].src;
+
+    audio.play();
+
+    // INIT VISUALIZER 🔥
+    if (!audioCtx) {
+      initVisualizer();
+      drawVisualizer();
+    }
+
+    audioCtx.resume();
+
+  } else {
+    audio.pause();
+  }
+  pulseLights();
+});
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => {
+    loader.style.opacity = '0';
+    loader.style.transition = '0.5s';
+    setTimeout(() => loader.style.display = 'none', 500);
+  }, 1200);
+});
+const canvasV = document.getElementById('djVisualizer');
+const ctxV = canvasV.getContext('2d');
+
+canvasV.width = window.innerWidth;
+canvasV.height = 120;
+
+let audioCtx, analyser, source, dataArray;
+
+function initVisualizer() {
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  analyser = audioCtx.createAnalyser();
+
+  source = audioCtx.createMediaElementSource(audio);
+  source.connect(analyser);
+  analyser.connect(audioCtx.destination);
+
+  analyser.fftSize = 64;
+  dataArray = new Uint8Array(analyser.frequencyBinCount);
+}
+
+function drawVisualizer() {
+  requestAnimationFrame(drawVisualizer);
+
+  if (!analyser) return;
+
+  analyser.getByteFrequencyData(dataArray);
+
+  ctxV.clearRect(0, 0, canvasV.width, canvasV.height);
+
+  let barWidth = canvasV.width / dataArray.length;
+
+  for (let i = 0; i < dataArray.length; i++) {
+    let height = dataArray[i];
+
+    ctxV.fillStyle = `hsl(${i * 10}, 100%, 50%)`;
+    ctxV.fillRect(i * barWidth, canvasV.height - height, barWidth - 2, height);
+  }
+}
+function pulseLights() {
+  if (!analyser) return;
+
+  analyser.getByteFrequencyData(dataArray);
+
+  let bass = dataArray[2]; // low freq = bass
+
+  document.body.style.boxShadow = `
+    inset 0 0 ${bass}px rgba(0,255,255,0.3)
+  `;
+
+  requestAnimationFrame(pulseLights);
+}
