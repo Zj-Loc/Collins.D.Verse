@@ -139,9 +139,9 @@ render();
 
 /* ---------- Music player logic (slide-in, play after user press) ---------- */
 const tracks = [
-  { src: 'music/jid vs toxicc mix 2025 - dj collombo.mp3', title: 'Cannabeats 1 — Intro', artist: 'DJ Collombo' },
+  { src: 'music/jid vs toxicc mix 2025 - dj collombo.mp3', title: 'Cannabeats 1 — Party Mix', artist: 'DJ Collombo' },
   { src: 'music/bset all tym mix 2025 - dj collombo.mp3', title: 'Cannabeats 2 — Midnight Drive', artist: 'DJ Collombo' },
-  { src: 'music/gospeul king - mix ft Dj Collombo.mp3', title: 'Cannabeats 3 — Lovers Groove', artist: 'DJ Collombo' }
+  { src: 'music/gospeul king - mix ft Dj Collombo.mp3', title: 'Cannabeats 3 — Gospel Groove', artist: 'DJ Collombo' }
 ];
 
 const audio = new Audio();
