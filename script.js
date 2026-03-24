@@ -139,8 +139,8 @@ render();
 
 /* ---------- Music player logic (slide-in, play after user press) ---------- */
 const tracks = [
-  { src: 'music/toxic.mp3', title: 'Cannabeats 1 — Party Mix', artist: 'DJ Collombo' },
-  { src: 'music/flavor.mp3', title: 'Cannabeats 2 — Midnight Drive', artist: 'DJ Collombo' },
+  { src: 'music/jid.mp3', title: 'Cannabeats 1 — Party Mix', artist: 'DJ Collombo' },
+  { src: 'music/jid (1).mp3', title: 'Cannabeats 2 — Midnight Drive', artist: 'DJ Collombo' },
   { src: 'music/gospeul king - mix ft Dj Collombo.mp3', title: 'Cannabeats 3 — Gospel Groove', artist: 'DJ Collombo' }
 ];
 
