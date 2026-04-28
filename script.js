@@ -204,6 +204,11 @@ pauseBtn.addEventListener('click', ()=> {
 prevBtn.addEventListener('click', ()=> setTrack(current - 1));
 nextBtn.addEventListener('click', ()=> setTrack(current + 1));
 audio.addEventListener('ended', ()=> setTrack(current + 1));
+audio.addEventListener('play', ()=>{
+  let plays = localStorage.getItem("plays") || 0;
+  plays++;
+  localStorage.setItem("plays", plays);
+});
 
 setTrack(0);
 
@@ -394,3 +399,13 @@ function pulseLights() {
 
   requestAnimationFrame(pulseLights);
 }
+document.querySelectorAll("section").forEach(sec=>{
+  sec.addEventListener("click", ()=>{
+    let name = sec.id;
+    let data = JSON.parse(localStorage.getItem("sections") || "{}");
+
+    data[name] = (data[name] || 0) + 1;
+
+    localStorage.setItem("sections", JSON.stringify(data));
+  });
+});
