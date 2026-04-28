@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookings — DJ Collombo</title>
+<link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+<h1 class="main-title">🚀Locify° Booking Space </h1>
+<p class="sub-title">Premium DJ • Business Web • IT Support • Creative Services <br>Book Your Session Now</p>
+<div class="packages">
+
+<h3>Ready to turn your idea into a masterpiece?</h3>
+<p>Let’s create magic, build your brand, and make your audience remember you.</p>
+
+<section class="engagement-message">
+  <h2>💎We dont just Service ! — @Locify° We Build Experiences & Soundscapes</h2>
+
+  <p>
+    Every great brand starts with a bold move.<br>
+    Every successful business starts with visibility.<br>
+    Every unforgettable event starts with the right energy.
+  </p>
+
+  <p>
+    That’s where we come in.
+  </p>
+
+  <p>
+    From music and entertainment to web development,
+    digital branding, posters, media production, and strategic marketing,
+    we help you create a presence people remember.
+  </p>
+  <p>
+    <ul>
+      <li>✔Your success is our mission.</li>
+      <li>✔ Your vision is our blueprint.</li>
+      <li>✔  Your growth is our strategy.</li>
+    </ul>
+  </p>
+
+  <p>
+    👇🏿Join the growing family of Locify°👇🏿.<br>
+    <strong>DJ Collombo x ZJ-LOC</strong>
+  </p>
+  <div class="music-section">
+    <a href="music.html" class="music-btn">TapTap</a>
+  </div>
+
+<div class="gallery-section">
+    <a href="arts.html" class="gallery-btn">SnapSnap</a>
+ </div>
+</section>
+<h2>💼 Service Packages</h2>
+  <div class="package-toggle">
+  <button onclick="showPackage('basic', this)" class="active">Basic</button>
+  <button onclick="showPackage('standard', this)">Standard</button>
+  <button onclick="showPackage('premium', this)">Premium</button>
+</div>
+<div id="aiSuggestion" class="ai-box">
+  🧠 Best for startups, small events, and personal brands.
+</div>
+
+  <div class="packages">
+
+  <!-- BASIC -->
+  <div class="package-group basic active-pack">
+
+    <div class="package-card dj-card">
+  <div class="package-img">
+    <img src="images/dj-basic.jpg">
+  </div>
+
+  <div class="package-info">
+    <h3>🎧 DJ BASIC EXPERIENCE</h3>
+
+    <p>
+      Perfect for intimate vibes and personal celebrations.
+      Designed for house parties, birthdays, and chill events 
+      where music sets the mood and keeps the energy alive.
+    </p>
+
+    <ul>
+      <li>✔ 3–5 Hour Live DJ Set</li>
+      <li>✔ Clean Sound System Setup</li>
+      <li>✔ Smooth Transitions + Crowd Control</li>
+      <li>✔ Custom Playlist (on request)</li>
+    </ul>
+<button class="book-package-btn" onclick="bookThisPackage('dj')">
+  🔥 Book This Package
+</button>
+    <span>KES 5,000 – 15,000</span>
+  </div>
+</div>
+    <div class="package-card web-card reverse">
+  <div class="package-img">
+    <img src="images/web-basic.jpg">
+  </div>
+
+  <div class="package-info">
+    <h3>💻 WEB BASIC PACKAGE</h3>
+
+    <p>
+      Ideal for individuals and startups looking to establish 
+      a clean and professional online presence without complexity.
+    </p>
+
+    <ul>
+      <li>✔ 3–5 Page Website</li>
+      <li>✔ Mobile Responsive Design</li>
+      <li>✔ Clean UI + Fast Loading</li>
+      <li>✔ Basic SEO Setup</li>
+    </ul>
+
+    <span>KES 10,000 – 20,000</span>
+    <button class="book-package-btn" onclick="bookThisPackage('web')">
+  🚀 Book This Package
+</button>
+  </div>
+</div>
+  </div>
+
+  <!-- STANDARD -->
+  <div class="package-group standard">
+
+    <div class="package-card dj-card">
+  <div class="package-img">
+    <img src="images/dj-standard.jpg" alt="DJ Standard Package">
+  </div>
+
+  <div class="package-info">
+    <h3>🎧 DJ STANDARD EXPERIENCE</h3>
+
+    <p>
+      Crafted for weddings, corporate functions, graduations, 
+      and medium-size events where the vibe must stay premium 
+      from start to finish.
+    </p>
+
+    <ul>
+      <li>✔ 5–8 Hour Professional DJ Performance</li>
+      <li>✔ Wedding / Event Playlist Planning</li>
+      <li>✔ Lighting & Club Effects Setup</li>
+      <li>✔ MC / Crowd Engagement Support</li>
+      <li>✔ Smooth Genre Transitions</li>
+      <li>✔ Pre-event consultation</li>
+    </ul>
+
+    <span>KES 10,000 – 30,000</span>
+    <button class="book-package-btn" onclick="bookThisPackage('dj')">
+  🔥 Book This Package
+</button>
+  </div>
+</div>
+
+<div class="package-card web-card reverse">
+  <div class="package-img">
+    <img src="images/web-standard.jpg" alt="Web Standard Package">
+  </div>
+
+  <div class="package-info">
+    <h3>💻 WEB STANDARD PACKAGE</h3>
+
+    <p>
+      Best for growing businesses that need a strong online presence, 
+      customer trust, and a polished digital brand.
+    </p>
+
+    <ul>
+      <li>✔ 5–8 Professional Pages</li>
+      <li>✔ Contact Forms + Email Integration</li>
+      <li>✔ Mobile Responsive Design</li>
+      <li>✔ Animations & Smooth Transitions</li>
+      <li>✔ Booking / Inquiry Features</li>
+      <li>✔ Basic Admin Dashboard</li>
+    </ul>
+
+    <span>KES 25,000 – 70,000</span>
+    <button class="book-package-btn" onclick="bookThisPackage('web')">
+  🚀 Book This Package
+</button>
+  </div>
+</div>
+  </div>
+
+  <!-- PREMIUM -->
+  <div class="package-group premium">
+
+    <div class="package-card dj-card">
+  <div class="package-img">
+    <img src="images/dj-premium.jpg" alt="DJ Premium Package">
+  </div>
+
+  <div class="package-info">
+    <h3>👑 DJ PREMIUM ELITE</h3>
+
+    <p>
+      The ultimate nightlife and mega-event package designed for clubs, 
+      concerts, brand activations, and all-night premium experiences.
+    </p>
+
+    <ul>
+      <li>✔ Full Night Performance</li>
+      <li>✔ Premium Sound + Lighting Setup</li>
+      <li>✔ Hype Mixes + Live Crowd Reading</li>
+      <li>✔ Customized Event Theme Playlist</li>
+      <li>✔ DJ Intro Branding + Drops</li>
+      <li>✔ VIP Event Consultation</li>
+    </ul>
+
+    <span>KES 20,000 – 50,000</span>
+    <button class="book-package-btn" onclick="bookThisPackage('dj')">
+  🔥 Book This Package
+</button>
+  </div>
+</div>
+
+<div class="package-card web-card reverse">
+  <div class="package-img">
+    <img src="images/web-premium.jpg" alt="Web Premium Package">
+  </div>
+
+  <div class="package-info">
+    <h3>👑 WEB PREMIUM SYSTEM</h3>
+
+    <p>
+      Built for serious businesses, startups, and organizations 
+      that need full systems, advanced design, and scalable architecture.
+    </p>
+
+    <ul>
+      <li>✔ Full Website / Web App</li>
+      <li>✔ Database Integration</li>
+      <li>✔ User Login & Authentication</li>
+      <li>✔ Admin Dashboard</li>
+      <li>✔ Payment Integration</li>
+      <li>✔ SEO + Performance Optimization</li>
+      <li>✔ Long-term Maintenance Support</li>
+    </ul>
+
+    <span>KES 80,000+ above</span>
+    <button class="book-package-btn" onclick="bookThisPackage('web')">
+  🚀 Download To Check Our Offers 
+</button>
+  </div>
+</div>
+  </div>
+
+</div>
+
+<section class="service-promo">
+  <h2>🎧 Elevate Your Vision with <strong>Locify°</strong></h2>
+
+  <p>
+    Welcome to a world where creativity meets strategy, and your vision turns into reality.
+    At <strong>Locify°</strong>, we do more than music — we create unforgettable experiences,
+    powerful visual moments, and premium media that captures attention.
+  </p>
+
+  <p>
+    Whether you need electrifying DJ entertainment for events, premium photography,
+    video production, brand visuals, posters, social media content, or full digital campaigns,
+    we are here to make your brand stand out.
+  </p>
+
+  <p>
+    Powered by <strong>ZJ-LOC Web Solutions</strong>, every service package is built with
+    smart digital strategy, modern web design, and audience-focused marketing that helps
+    your business grow, engage clients, and dominate online.
+  </p>
+
+  <h3>✨ Choose the Package That Matches Your Vision</h3>
+
+  <p>
+    Our <strong>Basic Package</strong> is perfect for startups, small events,
+    personal brands<br> and clients who want clean, professional results at an affordable rate.<br>
+    It gives you quality service while keeping your budget comfortable.
+  </p>
+
+  <p>
+    The <strong>Professional Package</strong> is designed for growing brands,<br>
+    premium events, business promotions, and social media campaigns.<br>
+    This package brings stronger branding, advanced visuals,<br>
+    audience engagement tools, and impactful media delivery.
+  </p>
+
+  <p>
+    Our <strong>Premium Package</strong> is the ultimate experience.<br>
+    This is built for brands, businesses, artists, politicians,
+    and high-end events<br>that need full production, marketing strategy,
+    luxury visuals<br>and top-tier digital presence.
+  </p>
+
+  <h3>🚀 Why Work With Us?</h3>
+
+  <p>
+    We combine entertainment, media, branding, technology,
+    and marketing psychology <br>to create services that don’t just look good<br>
+    they convert attention into engagement and engagement into loyal clients.
+  </p>
+
+  <p>
+    With DJ Collombo’s creative excellence and ZJ-LOC’s digital expertise,<br>
+    your brand gets the perfect balance of style, strategy, and impact.
+  </p>
+
+  <p class="cta-text">
+    Let’s build something unforgettable together.
+    Your audience is waiting.
+  </p>
+
+  <button onclick="openSession('dj')">Book My Guy🤏🏿</button>
+</section>
+
+<div class="services">
+
+  <!-- DJ BOOKING -->
+  <div class="service-card dj">
+    <h2>🎧 DJ BOOKINGS</h2>
+    <p>Clubs • Weddings • Events • Private Parties</p>
+    <button onclick="openSession('dj')">Start Session</button>
+  </div>
+
+  <!-- WEB DEV -->
+  <div class="service-card web">
+    <h2>💻 Web Developer</h2>
+    <p>Websites • Systems • UI/UX Design</p>
+    <button onclick="openSession('web')">Start Session</button>
+  </div>
+
+  <!-- IT SUPPORT -->
+  <div class="service-card it">
+    <h2>🛠 IT Support</h2>
+    <p>Fix PCs • Troubleshoot • Setup Systems</p>
+    <button onclick="openSession('it')">Start Session</button>
+  </div>
+
+  <!-- GRAPHICS -->
+  <div class="service-card design">
+    <h2>🎨 Graphics Master</h2>
+    <p>Logos • Branding • Posters • Edits</p>
+    <button onclick="openSession('design')">Get Locify°</button>
+  </div>
+
+</div>
+
+<!-- SESSION MODAL -->
+<div id="sessionModal" class="modal">
+  <div class="modal-box">
+
+    <span class="close" onclick="closeSession()">×</span>
+
+    <h2 id="sessionTitle"></h2>
+
+    <form action="https://formsubmit.co/collinslukk@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Booking Request">
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone" required>
+<input type="email" name="email" placeholder="Email" required>
+
+<select name="service">
+  <option>Choose Service</option>
+  <option>PC Repair</option>
+      <option>Software Installation</option>
+      <option>System Setup</option>
+</select>
+
+<textarea name="message" placeholder="Your request"></textarea>
+
+<input type="number" id="hours" placeholder="Number of hours / complexity">
+<p id="priceEstimate">Estimated: --</p>
+
+<button type="submit">📩Confirm Booking</button>
+
+<button type="button" onclick="openWhatsApp()" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i> Negotiate a Deal
+</button>
+
+</form>
+
+  </div>
+</div>
+
+<script src="booking.js"></script>
+<section class="contact-section">
+  <h2>📞 Need Faster Assistance?</h2>
+  <p>Talk directly with DJ Collombo for quick support and custom deals.</p>
+
+  <button onclick="openWhatsApp()" class="whatsapp-btn">
+    💬 Chat on WhatsApp
+  </button>
+</section>
+
+<footer>
+  <div class="socials">
+      <a href="https://www.youtube.com/@djcollombo3560">YouTube</a>
+      <a href="https://www.instagram.com/dj_collombo?igsh=dXRvbHVwZDU1MzA1">Instagram</a>
+      <a href="https://open.spotify.com/user/313veoescvozb65indbruplv4hye?si=S5WccPkLRTSBQngLvXAReA">Spotify</a>
+      <a href="https://hearthis.at/dj-collomboe">Hearthis.at</a>
+    </div>
+    <a href="Portfolio.html" class="home-btn">⬅ Back to Homepage</a>
+
+    <div class="apple-frame">
+    <p class="muted">© 2026 Collins — Zj-Loc. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
