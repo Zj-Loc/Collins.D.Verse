@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ Collombo | Music Lounge</title>
+  <link rel="stylesheet" href="music.css">
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ 
+
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="welcome-modal">
+    <div class="welcome-content">
+      <h1>🎧 Welcome to DJ Collombo Music Lounge</h1>
+      <p>Step into the heartbeat of DJ Collombo — a space where rhythm, energy, and creativity come alive.<br>
+    From smooth lounge vibes to electrifying mixes, this is where every beat tells a story and every sound sets the mood.<br>
+    Sit back, press play, and let the music take you on a journey.
+  </p></p>
+      <button onclick="enterLounge()">Enter Music Lounge</button>
+    </div>
+  </div>
+  <!--SideBar-->
+<div class="sidebar">
+  <h2>🎧 DJ Menu</h2>
+  <ul>
+    <li><a href="Portfolio.html">🏠 Home</a></li>
+    <li><a href="#hearthis-section">⬇Music Storex</a></li>
+    <li><a href="#youtube-section">📺 YouTube</a></li>
+    <li><a href="#spotify-section">🎧 Spotify</a></li>
+    <li><a href="booking.html">📅 Booking</a></li>
+  </ul>
+</div>
+  <!-- Header -->
+  <header class="hero">
+    <h1><strong>Locify°</strong> ‣Music Lounge</h1>
+    <p>Premium Mixes • Club Vibes • Smooth Sounds</p>
+    <p class="hero-music-text">
+  Where every beat sparks emotion and every mix creates a memory.
+</p>
+  </header>
+  
+    <!-- DISCOVER SLIDER -->
+  <section class="discover-slider" id="discoverSlider">
+  <div class="slides" id="slides">
+    <div class="slide slide1">
+      <span class="slide-text">🔥 Bangers Drop On Friday</span><br>
+      <strong class="highlight">Stay Tuned</strong>
+    </div>
+
+    <div class="slide slide2">
+      <span class="slide-text">🐾 Plug In • Zone Out</span>
+    </div>
+
+    <div class="slide slide3">
+      <span class="slide-text">⚡ Subscribe • Follow • Like • Share</span>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Music Showcase -->
+  <section class="music-grid">
+    <div class="track-card" onclick="openPlayer(0)">
+      <img src="images/thumb1.png" alt="Track">
+      <h3>Night Vibes Mix</h3>
+      <p>HipHop House • 45 mins</p>
+      <div class="track-buttons">
+      <button onclick="event.stopPropagation(); openPlayer(0)">▶ Play</button>
+        <a href="music/Diss_mix.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+
+    <div class="track-card" onclick="openPlayer(1)">
+      <img src="images/thumb2.png" alt="Track">
+      <h3>Club Heat</h3>
+      <p>Kenyan Lounge Bangers • 20 mins</p>
+      <div class="track-buttons">
+        <button onclick="event.stopPropagation(); openPlayer(1)">▶ Play</button>
+        <a href="music/Chill_mix.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(2)">
+      <img src="images/thumb.jpg" alt="Track">
+      <h3>Gym Mode Vibes</h3>
+      <p>Workout House • 6 mins</p>
+      <div class="track-buttons">
+      <button onclick="event.stopPropagation(); openPlayer(2)">▶ Play</button>
+        <a href="music/mix1.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(3)">
+      <img src="images/thumb3.jpg" alt="Track">
+      <h3>Earthgang</h3>
+      <p>HipHop House • 5 mins</p>
+      <div class="track-buttons">
+      <button onclick="event.stopPropagation(); openPlayer(3)">▶ Play</button>
+        <a href="music/jid.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(4)">
+      <img src="images/thumb4.jpg" alt="Track">
+      <h3>Boost Vibes</h3>
+      <p>HipHop House • 5 mins</p>
+      <div class="track-buttons">
+      <button onclick="event.stopPropagation(); openPlayer(4)">▶ Play</button>
+        <a href="music/jid (2).mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(5)">
+      <img src="images/epic.jpg" alt="Track">
+      <h3>Zone In Beats</h3>
+      <p>Workout House • 7 mins</p>
+      <div class="track-buttons">
+        <button onclick="event.stopPropagation(); openPlayer(5)">▶ Play</button>
+        <a href="music/epic_dawn.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(6)">
+      <img src="images/duffy.jpg" alt="Track">
+      <h3>Kenyan Bangers</h3>
+      <p>Kenyan Original• 3 mins</p>
+      <div class="track-buttons">
+     <button onclick="event.stopPropagation(); openPlayer(6)">▶ Play</button>
+        <a href="music/siaka.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(7)">
+      <img src="images/heathen.jpg" alt="Track">
+      <h3>Tavern Vibes</h3>
+      <p>Goosebumps House • 5 mins</p>
+      <div class="track-buttons">
+        <button onclick="event.stopPropagation(); openPlayer(7)">▶ Play</button>
+        <a href="music/heathens.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    <div class="track-card" onclick="openPlayer(8)">
+      <img src="images/thumb5.jpg" alt="Track">
+      <h3>Nihgtmare Vibes</h3>
+      <p>HipHop House • 5 mins</p>
+      <div class="track-buttons">
+        <button onclick="event.stopPropagation(); openPlayer(8)">▶ Play</button>
+        <a href="music/doba.mp3" download>⬇ Download</a>
+      </div>
+    </div>
+    
+  </section>
+
+
+  <!-- Music Player Modal -->
+  <!-- PREMIUM MUSIC PLAYER MODAL -->
+<div id="playerModal" class="player-modal">
+  <div class="player-content">
+
+    <div class="player-actions">
+  <span class="min-btn" onclick="minimizePlayer()">−</span>
+  <span class="close-btn" onclick="closePlayer()">&times;</span>
+</div>
+
+    <div class="album-glow"></div>
+
+    <img id="playerThumbnail" src="images/logo1.png" alt="Album Art">
+
+    <h2 id="trackTitle">Track Name</h2>
+    <p id="trackGenre">DJ Collombo Lounge</p>
+
+    <!-- WAVEFORM -->
+    <div class="waveform">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()">⏯</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+  </div>
+</div>
+<div id="miniPlayer" class="mini-player" onclick="restorePlayer()">
+  🎵 Now Playing: <span id="miniTrackTitle">Track Name</span>
+</div>
+
+  <!-- YouTube Section -->
+  <section id="youtube-section" class="youtube-section">
+    <h2>📺 YouTube Mixes</h2>
+    <div class="video-card">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/@djcollombo3560/videos?view=0&sort=dd&shelf_id=1"
+        
+        frameborder="0" allowfullscreen>
+      </iframe>
+      <div class="section-intro">
+  <p>
+    🎧 Dive into the visual side of the vibe with DJ Collombo’s exclusive YouTube mixes.<br>
+    From electrifying live sessions to curated club experiences and behind-the-decks energy,<br>
+    this section brings every beat to life on screen.<br>
+    Press play and experience the motion behind the music.<br>
+   <strong>Don't forget to subscribe for more exclusive content!</strong><br>
+   👇🏿Click Dj Collombo🥵!
+  </p>
+</div>
+      <a href="https://www.youtube.com/@djcollombo3560" target="_blank" class="yt-btn">
+  <i class="fab fa-youtube"></i> Watch on YouTube
+</a>
+    </div>
+    
+  </section>
+  <!-- HearThis.at Section -->
+  <section id="hearthis-section" class="hearthis-section">
+    <h2>🎵 HearThis.at Mixes</h2>
+    <iframe style="border-radius: 10px;" scrolling="no" id="hearthis_at_user_dj-collomboe"
+     width="100%" height="350" src="https://app.hearthis.at/dj-collomboe/embed/?hcolor=ba1010&css=&skin=light" 
+     frameborder="0" 
+     allowtransparency>
+    </iframe>
+    <div class="section-intro">
+  <p>
+   ⚓Download Mixxes on Hear this — a handpicked spotlight of the hottest sounds, <br>
+   signature mixes and crowd-favorite drops from DJ Collombo.<br>
+    Whether you're chasing chill vibes, club heat, or pure energy,<br>
+    these tracks are selected to keep the mood alive.
+  </p>
+</div>
+<a href="https://hearthis.at/dj-collomboe" target="_blank" class="ht-btn">
+  <i class="fab fa-hearthis"></i> Download on HearThis
+</a>
+  </section>
+
+  <!-- Spotify Section -->
+  <section id="spotify-section" class="spotify-section">
+    <h2>🎵 Spotify Playlist</h2>
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/1V0x0wfUwFnjRcKbowf3zf?si=XPT-E3I0TZ2F6Gy5Zd0WvA%0A"
+      width="100%" height="380" frameborder="0"
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <div class="section-intro">
+  <p>
+    🎵 Tune into the official Spotify playlist curated by Dj Collombo<br>
+    to keep the vibe going anywhere, anytime, any-vibe.<br>
+    From boosted lounge vibes to high-energy house sessions,this collection is<br>built for every mood,every moment and every listener.<br>
+    Follow Dj Collombo and feel the playlist .
+  </p>
+</div>
+<a href="https://hearthis.at/dj-collomboe" target="_blank" class="sy-btn">
+  <i class="fab fa-spotify"></i> Listen on Spotify
+</a>
+  </section>
+
+  <!-- Booking CTA -->
+  <section class="booking-section">
+    <a href="booking.html" class="booking-btn">📅 Book DJ Services</a>
+  </section>
+<!-- THEME TOGGLE BUTTON -->
+<div class="theme-container">
+    <button class="theme-main-btn" onclick="toggleThemeMenu()">
+        🎨 Choose Theme
+    </button>
+
+    <div class="theme-menu" id="themeMenu">
+        <button onclick="setTheme('gold')">🖤 Black & Gold</button>
+        <button onclick="setTheme('blue')">💙 Neon Blue</button>
+        <button onclick="setTheme('white')">🤍 Glass White</button>
+        <button onclick="setTheme('purple')">💜 Dark Purple</button>
+    </div>
+</div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <a href="https://www.youtube.com/@djcollombo3560">YouTube</a>
+      <a href="https://www.instagram.com/dj_collombo?igsh=dXRvbHVwZDU1MzA1">Instagram</a>
+      <a href="https://open.spotify.com/user/313veoescvozb65indbruplv4hye?si=S5WccPkLRTSBQngLvXAReA">Spotify</a>
+      <a href="https://hearthis.at/dj-collomboe">Hearthis.at</a>
+    </div>
+    <a href="Portfolio.html" class="home-btn">⬅ Back to Homepage</a>
+
+    <div class="apple-frame">
+    <p class="muted">© 2026 Collins — Zj-Loc. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="music.js"></script>
+  <div id="bgVisualizer" class="bg-visualizer"></div>
+   <!-- Background Equalizer -->
+  <div class="equalizer-bg">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</body>
+</html>
